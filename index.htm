@@ -3,16 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Camera Slideshow</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="slideshow-container">
-        <img class="slide active" src="https://i.pinimg.com/736x/69/d5/13/69d5130a678cab717083dc0776c6aaf1.jpg" alt="Slide 1">
-        <img class="slide" src="https://i.pinimg.com/736x/da/09/ea/da09ea435ac21795356db037fc1ae870.jpg" alt="Slide 2">
-        <img class="slide" src="https://i.pinimg.com/736x/12/05/40/120540c6c5d02676399a5fdf7a007a9e.jpg" alt="Slide 3">
-        <img class="slide" src="https://i.pinimg.com/736x/c0/31/a4/c031a4234295669487ef888e7ea75079.jpg" alt="Slide 4">
+
+    <!-- Ambient background blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <div class="page-wrapper">
+
+        <!-- Title above camera -->
+        <header class="page-header">
+            <p class="eyebrow">✦ memory reel ✦</p>
+            <h1>your <em>moments</em></h1>
+        </header>
+
+        <!-- Camera + slideshow -->
+        <div class="camera-wrap">
+            <!-- Slides go inside the screen area -->
+            <div class="slideshow-container">
+                <img class="slide" src="https://i.pinimg.com/736x/69/d5/13/69d5130a678cab717083dc0776c6aaf1.jpg" alt="Slide 1">
+                <img class="slide" src="https://i.pinimg.com/736x/da/09/ea/da09ea435ac21795356db037fc1ae870.jpg" alt="Slide 2">
+                <img class="slide" src="https://i.pinimg.com/1200x/99/ce/f5/99cef5f94fd07c03e1fe5b275f362901.jpg" alt="Slide 3">
+                <img class="slide" src="https://i.pinimg.com/736x/c0/31/a4/c031a4234295669487ef888e7ea75079.jpg" alt="Slide 4">
+                <img class="slide" src="https://i.pinimg.com/736x/52/a7/bb/52a7bba66d7002213dd7481a3e31ae3b.jpg" alt="Slide 5">
+                <img class="slide" src="https://i.pinimg.com/736x/12/4b/5c/124b5cce4bec4c9f342424959c1c1f24.jpg" alt="Slide 6">
+                <img class="slide" src="https://i.pinimg.com/1200x/17/6c/05/176c05d46f683b088cd6718c09de5cc6.jpg" alt="Slide 7">
+                <img class="slide" src="https://i.pinimg.com/736x/c5/dd/a3/c5dda30b4f4fa740b7d392d2494679b8.jpg" alt="Slide 8">
+                <img class="slide" src="https://i.pinimg.com/736x/9b/8d/a3/9b8da31b1f98919dc3716855fbcc2be4.jpg" alt="Slide 9">
+                <img class="slide" src="https://i.pinimg.com/736x/f7/91/a8/f791a864fed2834bfe92a574011c8775.jpg" alt="Slide 10">
+
+            </div>
+            <!-- Camera PNG on top -->
+            <img class="camera-overlay" src="_ (2).png" alt="Camera">
+        </div>
+
+        <!-- Controls below camera -->
+        <div class="controls">
+            <button id="play-btn" class="ctrl-btn primary">
+                <span class="btn-icon">▶</span> Play
+            </button>
+            <button id="prev-btn" class="ctrl-btn secondary">‹</button>
+            <button id="next-btn" class="ctrl-btn secondary">›</button>
+        </div>
+
+        <!-- Dot indicators -->
+        <div class="dots" id="dots"></div>
+
+        <!-- Slide counter -->
+        <p class="counter" id="counter">1 / 7</p>
+
     </div>
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
